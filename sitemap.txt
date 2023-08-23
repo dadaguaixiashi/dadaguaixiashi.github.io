@@ -3,3 +3,4 @@ http://example.com/tags/index.html
 http://example.com/categories/index.html
 http://example.com/links/index.html
 http://example.com/
+http://example.com/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/
