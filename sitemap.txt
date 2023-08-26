@@ -4,8 +4,8 @@ http://example.com/posts/40917/
 http://example.com/posts/31628/
 http://example.com/posts/47629/
 http://example.com/posts/30988/
-http://example.com/posts/39180/
 http://example.com/posts/53272/
+http://example.com/posts/39180/
 http://example.com/posts/25132/
 http://example.com/posts/19038/
 http://example.com/posts/32319/
