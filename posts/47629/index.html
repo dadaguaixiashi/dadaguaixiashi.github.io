@@ -1,0 +1,636 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>9.5 | 明月清风居</title><meta name="keywords" content="基础知识"><meta name="author" content="大大怪下士"><meta name="copyright" content="大大怪下士"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="9.5"><meta name="application-name" content="9.5"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="9.5"><meta property="og:url" content="http://example.com/posts/47629/index.html"><meta property="og:site_name" content="明月清风居"><meta property="og:description" content="C++基础知识回顾 编译器  为了正确的遵循教程，需要最新的编译器。它应支持（即使只是部分）2011 标准引入的功能。  什么是编译器 计算机只能理解一种语言，而这种语言由 1 和 0 组成的指令组成。这种计算机语言被恰当地称为机器语言。 因为计算机只能理解机器语言，而人类希望用高级语言编写高级语言"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://example.com/img/25.jpg"><meta property="article:author" content="大大怪下士"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://example.com/img/25.jpg"><meta name="description" content="C++基础知识回顾 编译器  为了正确的遵循教程，需要最新的编译器。它应支持（即使只是部分）2011 标准引入的功能。  什么是编译器 计算机只能理解一种语言，而这种语言由 1 和 0 组成的指令组成。这种计算机语言被恰当地称为机器语言。 因为计算机只能理解机器语言，而人类希望用高级语言编写高级语言"><link rel="shortcut icon" href="/img/avatar.png"><link rel="canonical" href="http://example.com/posts/47629/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 大大怪下士","link":"链接: ","source":"来源: 明月清风居","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '明月清风居',
+  title: '9.5',
+  postAI: '',
+  pageFillDescription: 'C++基础知识回顾, 编译器, 什么是编译器, 控制台程序, 程序的结构, 使用命名空间标准, 变量和类型, Identifiers, 变量声明, 变量的初始化, 类型推导：auto和decltype, 字符串简介, 常数, 字面量, 预处理器定义, 运算符, 基本输入和输出基础知识回顾编译器为了正确的遵循教程需要最新的编译器它应支持即使只是部分标准引入的功能什么是编译器计算机只能理解一种语言而这种语言由和组成的指令组成这种计算机语言被恰当地称为机器语言因为计算机只能理解机器语言而人类希望用高级语言编写高级语言所以必须在某些时候将高级语言重新编写翻译成机器语言这是通过内置在各种编程应用程序中的称为编译器解释器或汇编器的特殊程序来完成的被设计成一种编译型语言也就是说它一般被翻译成系统可以直接理解的机器语言使得生成的程序非常高效为此需要一组工具称为开发工具链其核心是编译器及其链接器控制台程序控制台程序是使用文本与用户和环境进行通信的程序例如将文本打印到屏幕或从键盘读取输入控制台程序易于交互并且通常具有在所有平台上相同的可预测行为它们也很容易实现程序的结构以井号开头的行是由所谓的预处理器读取和解释的指令它们是在程序本身开始编译之前解释的特殊行在这种情况下指令指示预处理器包含一段标准代码称为标头它允许执行标准输入和输出操作例如编写此程序的输出你好世界到屏幕上使用命名空间标准如果您以前看过代码那么您可能已经看到被使用而不是两者命名同一个对象第一个使用其非限定名称而第二个直接在命名空间内限定它是标准库的一部分标准库中的所有元素都在所谓的命名空间中声明命名空间为了引用命名空间中的元素程序应限定库元素的每次使用正如我们通过前缀或引入其组件的可见性引入这些组件可见性的最典型方法是使用声明上面的声明允许以非限定方式访问命名空间中的所有元素不带前缀考虑到这一点可以重写最后一个示例以不限定地使用访问命名空间元素的两种方式显式限定和使用声明在中都是有效的并且产生完全相同的行为为简单起见并提高可读性这些教程中的示例将更多地使用后一种方法和声明但请注意显式限定是保证名称冲突永远不会发生的唯一方法变量和类型我们现在可以将变量定义为内存的一部分来存储值每个变量都需要一个名称来标识它并将其与其他变量区分开来我们可以将变量命名为我们能想到的任何名称只要它们是有效的标识符有效标识符是一个或多个字母数字或下划线字符的序列空格标点符号和符号不能成为标识符的一部分非常重要语言是一种区分大小写的语言这意味着以大写字母书写的标识符不等同于另一个具有相同名称但以小写字母书写的标识符变量声明是一种强类型语言并且要求每个变量在第一次使用之前都用它的类型声明这会通知编译器在内存中为变量保留的大小以及如何解释其值变量的初始化当上面示例中的变量被声明时它们具有未确定的值直到它们第一次被赋值但是从声明的那一刻起变量就有可能具有特定的值这称为变量的初始化在中有三种初始化变量的方法它们都是等价的让人想起多年来语言的演变第一个称为类初始化因为它是从语言继承的包括附加一个等号然后是值变量被初始化例如第二种方法称为构造函数初始化由语言引入将初始值括在括号之间最后第三种方法称为统一初始化与上述类似但使用花括号代替括号这是在年标准的修订中引入的类型推导和当一个新变量被初始化时编译器可以通过初始化器自动判断出该变量的类型为此将其用作变量的类型说明符就足够了未初始化的变量也可以使用带有说明符的类型推导并且是最近添加到该语言中的强大功能但是他们引入的类型推导功能意味着在无法通过其他方式获得类型或使用它提高代码可读性时使用上面的两个示例可能都不是这些用例事实上它们可能降低了可读性字符串简介基本类型代表可以运行代码的机器处理的最基本类型但语言的主要优势之一是其丰富的复合类型集其中基本类型只是构建块复合类型的一个例子是类这种类型的变量能够存储字符序列例如单词或句子一个非常有用的功能与基本数据类型的第一个区别是为了声明和使用这种类型的对象变量程序需要包含标准库中定义类型的标头标头常数常量是具有固定值的表达式字面量字面量是最明显的常量它们用于表示程序源代码中的特定值文字常量可以分为整数浮点字符字符串布尔值指针和用户定义的文字一些程序员还使用一种技巧来在多行中包含长字符串文字在中行尾的反斜杠被视为行继续字符它将该行和下一行合并为一行因此下面的代码预处理器定义命名常量值的另一种机制是使用预处理器定义它们具有以下形式在此指令之后代码中的任何出现都被解释为其中替换是任何字符序列直到行尾这种替换由预处理器执行并且发生在程序编译之前因此导致了一种盲目替换不以任何方式检查所涉及的类型或语法的有效性运算符从最高优先级到最低优先级运算符按以下顺序计算等级优先组操作员描述分组范围范围限定符左到右后缀一元后缀递增递减左到右功能形式下标会员访问前缀一元前缀递增递减右到左按位非逻辑非一元前缀参考取消参考分配解除分配参数包风格的类型转换指向成员的指针访问指针左到右算术缩放乘法除法取模左到右算术加法加法减法左到右按位移位左移右移左到右关系型比较运算符左到右平等平等不平等左到右和按位与左到右独家或按位异或左到右包含或按位或连词逻辑与左到右析取赋值级表达式赋值复合赋值条件运算符测序逗号分隔符左到右基本输入和输出溪流描述标准输入流标准输出流标准错误输出流标准日志记录输出流',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-24 20:48:53',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="明月清风居" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">明月清风居</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/C/" style="font-size: 1.05rem;">C++<sup>5</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.05rem;">前端<sup>1</sup></a><a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 1.05rem;">基础知识<sup>11</sup></a><a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" style="font-size: 1.05rem;">密码学<sup>1</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 1.05rem;">计算机网络<sup>7</sup></a><a href="/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/" style="font-size: 1.05rem;">音视频<sup>9</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">18</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%90%90%E7%A2%8E%E7%9F%A5%E8%AF%86/" itemprop="url">琐碎知识</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>基础知识</span></a></span></div></div><h1 class="post-title" itemprop="name headline">9.5</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2022-09-05T14:23:44.000Z" title="发表于 2022-09-05 22:23:44">2022-09-05</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2023-08-24T12:48:53.824Z" title="更新于 2023-08-24 20:48:53">2023-08-24</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为哈尔滨"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>哈尔滨</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/./img/25.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/posts/47629/"><header><a class="post-meta-categories" href="/categories/%E7%90%90%E7%A2%8E%E7%9F%A5%E8%AF%86/" itemprop="url">琐碎知识</a><a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" tabindex="-1" itemprop="url">基础知识</a><h1 id="CrawlerTitle" itemprop="name headline">9.5</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">大大怪下士</span><time itemprop="dateCreated datePublished" datetime="2022-09-05T14:23:44.000Z" title="发表于 2022-09-05 22:23:44">2022-09-05</time><time itemprop="dateCreated datePublished" datetime="2023-08-24T12:48:53.824Z" title="更新于 2023-08-24 20:48:53">2023-08-24</time></header><h1 id="C-基础知识回顾"><a href="#C-基础知识回顾" class="headerlink" title="C++基础知识回顾"></a>C++基础知识回顾</h1><hr>
+<h2 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h2><hr>
+<blockquote>
+<p>为了正确的遵循教程，需要最新的编译器。它应支持（即使只是部分）2011 标准引入的功能。</p>
+</blockquote>
+<h2 id="什么是编译器"><a href="#什么是编译器" class="headerlink" title="什么是编译器"></a>什么是编译器</h2><hr>
+<p>计算机只能理解一种语言，而这种语言由 1 和 0 组成的指令组成。这种计算机语言被恰当地称为机器语言。</p>
+<p>因为计算机只能理解机器语言，而人类希望用高级语言编写高级语言，所以必须在某些时候将高级语言重新编写（翻译）成机器语言。这是通过内置在各种编程应用程序中的称为编译器、解释器或汇编器的特殊程序来完成的。</p>
+<p>C++被设计成一种编译型语言，也就是说它一般被翻译成系统可以直接理解的机器语言，使得生成的程序非常高效。为此，需要一组工具，称为开发工具链，其核心是编译器及其链接器。</p>
+<h2 id="控制台程序"><a href="#控制台程序" class="headerlink" title="控制台程序"></a>控制台程序</h2><hr>
+<p>控制台程序是使用文本与用户和环境进行通信的程序，例如将文本打印到屏幕或从键盘读取输入。</p>
+<p>控制台程序易于交互，并且通常具有在所有平台上相同的可预测行为，它们也很容易实现。</p>
+<p>IDE：<strong>Code::blocks</strong>，<strong>Visual Studio Express</strong>，<strong>Dev-C++</strong></p>
+<p>Compiler：<strong>GCC</strong>，<strong>Clang</strong></p>
+<h2 id="程序的结构"><a href="#程序的结构" class="headerlink" title="程序的结构"></a>程序的结构</h2><hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>以井号 () 开头的行<code>#</code>是由所谓的<em>预处理器</em>读取和解释的指令。它们是在程序本身开始编译之前解释的特殊行。在这种情况下，指令<code>#include &lt;iostream&gt;</code>指示预处理器包含一段标准 C++ 代码，称为<em>标头 iostream</em>，它允许执行标准输入和输出操作，例如编写此程序的输出 (你好世界) 到屏幕上。</p>
+<h3 id="使用命名空间标准"><a href="#使用命名空间标准" class="headerlink" title="使用命名空间标准"></a>使用命名空间标准</h3><hr>
+<p>如果您以前看过 C++ 代码，那么您可能已经看到<code>cout</code>被使用而不是<code>std::cout</code>. 两者命名同一个对象：第一个使用其<em>非限定名称</em>( <code>cout</code>)，而第二个直接在<em>命名空间</em> <code>std</code>内限定它(as <code>std::cout</code>)。</p>
+<p><code>cout</code>是标准库的一部分，标准 C++ 库中的所有元素都在所谓的<em>命名空间</em>中声明：命名空间<code>std</code>。</p>
+<p>为了引用<code>std</code>命名空间中的元素，程序应限定库元素的每次使用（正如我们通过<code>cout</code>前缀<code>std::</code>)，或引入其组件的可见性。引入这些组件可见性的最典型方法是<em>使用声明</em>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std；</span><br></pre></td></tr></table></figure>
+
+<p><em>上面的声明允许以非限定</em>方式<code>std</code>访问命名空间中 的所有元素（不带前缀）。 考虑到这一点，可以重写最后一个示例以不限定地使用std::&#96;</p>
+<p>访问命名空间元素的两种方式<code>std</code>（显式限定和<em>使用</em>声明）在 C++ 中都是有效的，并且产生完全相同的行为。为简单起见并提高可读性，这些教程中的示例将更多地使用后一种方法和<em>using</em>声明，但请注意，<em>显式限定</em>是保证名称冲突永远不会发生的<em><strong>唯一方法</strong></em>。</p>
+<h2 id="变量和类型"><a href="#变量和类型" class="headerlink" title="变量和类型"></a>变量和类型</h2><hr>
+<p>我们现在可以将变量定义为内存的一部分来存储值。每个变量都需要一个名称来标识它并将其与其他变量区分开来。我们可以将变量命名为我们能想到的任何名称，只要它们是有效的 C++ 标识符。</p>
+<h3 id="Identifiers"><a href="#Identifiers" class="headerlink" title="Identifiers"></a>Identifiers</h3><hr>
+<p>有效标识符是一个或多个字母、数字或下划线字符 ( )<code>_</code>的序列。空格、标点符号和符号不能成为标识符的一部分。</p>
+<p><strong>非常重要：</strong> C++ 语言是一种“区分大小写”的语言。这意味着以大写字母书写的标识符不等同于另一个具有相同名称但以小写字母书写的标识符</p>
+<h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><hr>
+<p>C++ 是一种强类型语言，并且要求每个变量在第一次使用之前都用它的类型声明。这会通知编译器在内存中为变量保留的大小以及如何解释其值。</p>
+<h3 id="变量的初始化"><a href="#变量的初始化" class="headerlink" title="变量的初始化"></a>变量的初始化</h3><hr>
+<p>当上面示例中的变量被声明时，它们具有未确定的值，直到它们第一次被赋值。但是从声明的那一刻起，变量就有可能具有特定的值。这称为变量的<em>初始化</em>。</p>
+<p>在 C++ 中，有三种初始化变量的方法。它们都是等价的，让人想起多年来语言的演变：</p>
+<p>第一个，称为类<em>c 初始化</em>（因为它是从 C 语言继承的），包括附加一个等号，然后是值变量被初始化：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type identifier = initial_value;</span><br><span class="line">例如：</span><br><span class="line"><span class="type">int</span> x = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>第二种方法，称为<em>构造函数初始化</em>（由 C++ 语言引入），将初始值括在括号 ( <code>()</code>) 之间：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">type <span class="title">identifier</span> <span class="params">(initial_value)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">x</span> <span class="params">(<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>最后，第三种方法，称为<em>统一初始化</em>，与上述类似，但使用花括号 ( <code>&#123;&#125;</code>) 代替括号（这是在 2011 年 C++ 标准的修订中引入的）：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type identifier &#123;initial_value&#125;;</span><br><span class="line"><span class="type">int</span> x &#123;<span class="number">0</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="类型推导：auto和decltype"><a href="#类型推导：auto和decltype" class="headerlink" title="类型推导：auto和decltype"></a>类型推导：auto和decltype</h2><hr>
+<p>当一个新变量被初始化时，编译器可以通过初始化器自动判断出该变量的类型。为此，将其<code>auto</code>用作变量的类型说明符就足够了：</p>
+<p>未初始化的变量也可以使用带有说明符的类型推导<code>decltype</code>：</p>
+<p><code>auto</code>并且<code>decltype</code>是最近添加到该语言中的强大功能。但是他们引入的类型推导功能意味着在无法通过其他方式获得类型或使用它提高代码可读性时使用。上面的两个示例可能都不是这些用例。事实上，它们可能降低了可读性.</p>
+<h2 id="字符串简介"><a href="#字符串简介" class="headerlink" title="字符串简介"></a>字符串简介</h2><hr>
+<p>基本类型代表可以运行代码的机器处理的最基本类型。但 C++ 语言的主要优势之一是其丰富的复合类型集，其中基本类型只是构建块。</p>
+<p>复合类型的一个例子是<code>string</code>类。这种类型的变量能够存储字符序列，例如单词或句子。一个非常有用的功能！</p>
+<p>与基本数据类型的第一个区别是，为了声明和使用这种类型的对象（变量），程序需要包含标准库中定义类型的标头（标头<code>&lt;string&gt;</code>）：</p>
+<h2 id="常数"><a href="#常数" class="headerlink" title="常数"></a>常数</h2><hr>
+<blockquote>
+<p>常量是具有固定值的表达式。</p>
+</blockquote>
+<h3 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h3><hr>
+<p>字面量是最明显的常量。它们用于表示程序源代码中的特定值。</p>
+<p>文字常量可以分为：整数、浮点、字符、字符串、布尔值、指针和用户定义的文字。</p>
+<p>一些程序员还使用一种技巧来在多行中包含长字符串文字：在 C++ 中，<code>\</code>行尾的反斜杠 ( ) 被视为<em>行继续</em>字符，它将该行和下一行合并为一行。因此下面的代码：</p>
+<h3 id="预处理器定义"><a href="#预处理器定义" class="headerlink" title="预处理器定义"></a>预处理器定义</h3><hr>
+<p>命名常量值的另一种机制是使用预处理器定义。它们具有以下形式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define identifier replacement</span><br></pre></td></tr></table></figure>
+
+<p>在此指令之后，代码中的任何出现都<code>identifier</code>被解释为<code>replacement</code>，其中替换是任何字符序列（直到行尾）。这种替换由预处理器执行，并且发生在程序编译之前，因此导致了一种盲目替换：不以任何方式检查所涉及的类型或语法的有效性。</p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><hr>
+<p>从最高优先级到最低优先级，C++ 运算符按以下顺序计算：</p>
+<table>
+<thead>
+<tr>
+<th align="left">等级</th>
+<th align="left">优先组</th>
+<th align="left">操作员</th>
+<th align="left">描述</th>
+<th align="left">分组</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">范围</td>
+<td align="left"><code>::</code></td>
+<td align="left">范围限定符</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">后缀（一元）</td>
+<td align="left"><code>++ --</code></td>
+<td align="left">后缀递增&#x2F;递减</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left"><code>()</code></td>
+<td align="left">功能形式</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>[]</code></td>
+<td align="left">下标</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>. -&gt;</code></td>
+<td align="left">会员访问</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">前缀（一元）</td>
+<td align="left"><code>++ --</code></td>
+<td align="left">前缀递增&#x2F;递减</td>
+<td align="left">右到左</td>
+</tr>
+<tr>
+<td align="left"><code>~ !</code></td>
+<td align="left">按位非&#x2F;逻辑非</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>+ -</code></td>
+<td align="left">一元前缀</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>&amp; *</code></td>
+<td align="left">参考&#x2F;取消参考</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>new delete</code></td>
+<td align="left">分配&#x2F;解除分配</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>sizeof</code></td>
+<td align="left">参数包</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>(*type*)</code></td>
+<td align="left">C 风格的类型转换</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">指向成员的指针</td>
+<td align="left"><code>.* -&gt;*</code></td>
+<td align="left">访问指针</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">算术：缩放</td>
+<td align="left"><code>* / %</code></td>
+<td align="left">乘法、除法、取模</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">算术：加法</td>
+<td align="left"><code>+ -</code></td>
+<td align="left">加法，减法</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">按位移位</td>
+<td align="left"><code>&lt;&lt; &gt;&gt;</code></td>
+<td align="left">左移，右移</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">关系型</td>
+<td align="left"><code>&lt; &gt; &lt;= &gt;=</code></td>
+<td align="left">比较运算符</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">平等</td>
+<td align="left"><code>== !=</code></td>
+<td align="left">平等&#x2F;不平等</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">和</td>
+<td align="left"><code>&amp;</code></td>
+<td align="left">按位与</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">独家或</td>
+<td align="left"><code>^</code></td>
+<td align="left">按位异或</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">包含或</td>
+<td align="left">&#96;</td>
+<td align="left">&#96;</td>
+<td align="left">按位或</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">连词</td>
+<td align="left"><code>&amp;&amp;</code></td>
+<td align="left">逻辑与</td>
+<td align="left">左到右</td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">析取</td>
+<td align="left">&#96;</td>
+<td align="left"></td>
+<td align="left">&#96;</td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">赋值级表达式</td>
+<td align="left">&#96;&#x3D; *&#x3D; &#x2F;&#x3D; %&#x3D; +&#x3D; -&#x3D;&gt;&gt;&#x3D; &lt;&lt;&#x3D; &amp;&#x3D; ^&#x3D;</td>
+<td align="left">&#x3D;&#96;</td>
+<td align="left">赋值&#x2F;复合赋值</td>
+</tr>
+<tr>
+<td align="left"><code>?:</code></td>
+<td align="left">条件运算符</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">测序</td>
+<td align="left"><code>,</code></td>
+<td align="left">逗号分隔符</td>
+<td align="left">左到右</td>
+</tr>
+</tbody></table>
+<h2 id="基本输入和输出"><a href="#基本输入和输出" class="headerlink" title="基本输入和输出"></a>基本输入和输出</h2><hr>
+<table>
+<thead>
+<tr>
+<th align="left">溪流</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>cin</code></td>
+<td align="left">标准输入流</td>
+</tr>
+<tr>
+<td align="left"><code>cout</code></td>
+<td align="left">标准输出流</td>
+</tr>
+<tr>
+<td align="left"><code>cerr</code></td>
+<td align="left">标准错误（输出）流</td>
+</tr>
+<tr>
+<td align="left"><code>clog</code></td>
+<td align="left">标准日志记录（输出）流</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/avatar.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/avatar.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">大大怪下士</div><div class="post-copyright__author_desc">大大怪下士</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/posts/47629/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/posts/47629/')">9.5</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/posts/47629/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=9.5&amp;url=http://example.com/posts/47629/&amp;pic=/./img/25.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">明月清风居</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>基础知识<span class="tagsPageCount">11</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/./img/7.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/53898/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/24.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">密码学1</div></div></a></div><div class="next-post pull-right"><a href="/posts/18835/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/26.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Java开发规范</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/posts/37176/" title="8月知识点"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/28.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-09-17</div><div class="title">8月知识点</div></div></a></div><div><a href="/posts/30988/" title="9.1"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/22.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-09-04</div><div class="title">9.1</div></div></a></div><div><a href="/posts/31628/" title="9.7"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/27.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-09-14</div><div class="title">9.7</div></div></a></div><div><a href="/posts/29df/" title="FTP"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/11.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-09-03</div><div class="title">FTP</div></div></a></div><div><a href="/posts/25246/" title="Git"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/21.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-08-29</div><div class="title">Git</div></div></a></div><div><a href="/posts/18835/" title="Java开发规范"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/26.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-09-14</div><div class="title">Java开发规范</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE"><span class="toc-number">1.</span> <span class="toc-text">C++基础知识回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-number">1.1.</span> <span class="toc-text">编译器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">什么是编译器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.3.</span> <span class="toc-text">控制台程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.</span> <span class="toc-text">程序的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E6%A0%87%E5%87%86"><span class="toc-number">1.4.1.</span> <span class="toc-text">使用命名空间标准</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.5.</span> <span class="toc-text">变量和类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Identifiers"><span class="toc-number">1.5.1.</span> <span class="toc-text">Identifiers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="toc-number">1.5.2.</span> <span class="toc-text">变量声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.5.3.</span> <span class="toc-text">变量的初始化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC%EF%BC%9Aauto%E5%92%8Cdecltype"><span class="toc-number">1.6.</span> <span class="toc-text">类型推导：auto和decltype</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%80%E4%BB%8B"><span class="toc-number">1.7.</span> <span class="toc-text">字符串简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E6%95%B0"><span class="toc-number">1.8.</span> <span class="toc-text">常数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">1.8.1.</span> <span class="toc-text">字面量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%AE%9A%E4%B9%89"><span class="toc-number">1.8.2.</span> <span class="toc-text">预处理器定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.9.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA"><span class="toc-number">1.10.</span> <span class="toc-text">基本输入和输出</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/7061/" title="红黑树"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="红黑树"/></a><div class="content"><a class="title" href="/posts/7061/" title="红黑树">红黑树</a><time datetime="2023-11-19T15:21:10.000Z" title="发表于 2023-11-19 23:21:10">2023-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1b47/" title="B_B+树"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/15.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="B_B+树"/></a><div class="content"><a class="title" href="/posts/1b47/" title="B_B+树">B_B+树</a><time datetime="2023-11-19T15:20:23.000Z" title="发表于 2023-11-19 23:20:23">2023-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ef35/" title="排序算法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/11.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="排序算法"/></a><div class="content"><a class="title" href="/posts/ef35/" title="排序算法">排序算法</a><time datetime="2023-11-19T15:19:10.000Z" title="发表于 2023-11-19 23:19:10">2023-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/42f5/" title="hash算法原理"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hash算法原理"/></a><div class="content"><a class="title" href="/posts/42f5/" title="hash算法原理">hash算法原理</a><time datetime="2023-11-19T15:18:18.000Z" title="发表于 2023-11-19 23:18:18">2023-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d07f/" title="动态回溯分治贪心"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./img/22.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="动态回溯分治贪心"/></a><div class="content"><a class="title" href="/posts/d07f/" title="动态回溯分治贪心">动态回溯分治贪心</a><time datetime="2023-11-19T15:16:42.000Z" title="发表于 2023-11-19 23:16:42">2023-11-19</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2023 By <a class="footer-bar-link" href="/" title="大大怪下士" target="_blank">大大怪下士</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">4</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/C/" style="font-size: 0.88rem;">C++<sup>5</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 0.88rem;">前端<sup>1</sup></a><a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 0.88rem;">基础知识<sup>11</sup></a><a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" style="font-size: 0.88rem;">密码学<sup>1</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 0.88rem;">计算机网络<sup>7</sup></a><a href="/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/" style="font-size: 0.88rem;">音视频<sup>9</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.4/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.9",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 大大怪下士 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "visitor@anheyu.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

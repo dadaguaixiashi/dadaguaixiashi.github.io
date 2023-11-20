@@ -26,8 +26,8 @@ http://example.com/posts/5850/
 http://example.com/posts/8232/
 http://example.com/posts/60186/
 http://example.com/posts/38374/
-http://example.com/posts/56432/
 http://example.com/posts/53898/
+http://example.com/posts/56432/
 http://example.com/posts/57803/
 http://example.com/posts/18835/
 http://example.com/posts/54626/
@@ -38,8 +38,8 @@ http://example.com/links/index.html
 http://example.com/
 http://example.com/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/
 http://example.com/tags/C/
-http://example.com/tags/%E5%89%8D%E7%AB%AF/
 http://example.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/
+http://example.com/tags/%E5%89%8D%E7%AB%AF/
 http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/
 http://example.com/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/
 http://example.com/categories/%E7%90%90%E7%A2%8E%E7%9F%A5%E8%AF%86/
