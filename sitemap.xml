@@ -308,7 +308,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/posts/6304/</loc>
+    <loc>http://example.com/posts/25246/</loc>
     
     <lastmod>2023-08-24</lastmod>
     
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/posts/25246/</loc>
+    <loc>http://example.com/posts/6304/</loc>
     
     <lastmod>2023-08-24</lastmod>
     
@@ -358,14 +358,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/</loc>
+    <loc>http://example.com/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://example.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/</loc>
     <lastmod>2023-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
